@@ -68,9 +68,9 @@ function App() {
     }, []);
 
     return (
-        <main className="bg-grayish-blue/50 relative mx-auto flex max-w-xl flex-col items-center rounded-xl p-6 pb-14">
+        <main className="relative mx-auto flex max-w-xl flex-col items-center rounded-xl bg-grayish-blue/50 p-6 pb-14">
             {isLoading && (
-                <p className="text-neon-green mb-8 text-base tracking-[0.15em]">
+                <p className="mb-8 text-base tracking-[0.15em] text-neon-green">
                     Loading...
                 </p>
             )}
@@ -79,10 +79,10 @@ function App() {
             )}
             {!isLoading && !err && (
                 <>
-                    <h1 className="text-neon-green text-sm uppercase tracking-[0.25em]">
+                    <h1 className="text-sm uppercase tracking-[0.25em] text-neon-green">
                         advice #{id}
                     </h1>
-                    <p className="text-light-cyan mb-6 mt-8 text-center text-base">
+                    <p className="mb-6 mt-8 text-center text-base text-light-cyan">
                         &ldquo;{advice}&rdquo;
                     </p>
                 </>
@@ -100,7 +100,7 @@ function App() {
             )}
             <button
                 onClick={fetchAdvice}
-                className="bg-neon-green hover:shadow-neon-green absolute bottom-[-32px] rounded-full p-5 transition duration-300 hover:shadow-[0_0_16px_5px] "
+                className="absolute bottom-[-32px] rounded-full bg-neon-green p-5 transition duration-300 hover:shadow-[0_0_16px_5px] hover:shadow-neon-green "
             >
                 <img src="/public/icon-dice.svg" alt="dice icon" />
             </button>
